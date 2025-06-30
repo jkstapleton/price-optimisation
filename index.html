@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>optimisation_web</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>index</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7550,14 +7550,31 @@ Analysing the results and discussing challenges faced along the way.</p>
 <p>transactional data is from september 2016 to 2020 April</p>
 </blockquote>
 <blockquote>
-<p>over 112, 000 transactions over the period</p>
+<p>more than 98,000 transactions over the period</p>
 </blockquote>
 <blockquote>
-<p>3067 original seller ids</p>
+<p>2912 original seller ids</p>
 </blockquote>
 <blockquote>
 <p>Data cleaned before 2017 and after 2018-08 due to the inconsistency of the quantity of the data and therefore the inability to understand its legitamacy</p>
 </blockquote>
+<blockquote>
+<p>Monthly sales saw rapid  growth with it peaking in october 2017 helped by Black Friday from their it levelled out with it dipping in May 2018 onwards.</p>
+</blockquote>
+<blockquote>
+<p>Health and Beauty, Watches and bed bath and table are the three largest categories of sales</p>
+</blockquote>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=30274fad">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><img alt="image.png" src="./Graphs/metrics_snip.png"/></p>
 </div>
 </div>
 </div>
@@ -7609,6 +7626,12 @@ Analysing the results and discussing challenges faced along the way.</p>
 <p>These factors ensure that the elasticity curve can be accurately populated and modeled.</p>
 <p>Based on the data analysis, the product with ID <code>e0d64dcfaa3b6db5c54ca298ae101d05</code> has been selected for price optimisation. This product was chosen due to its sufficient number of unique prices and a high volume of orders, which provides a robust dataset for elasticity analysis.</p>
 <p>This product is a <strong>watch</strong>, with prices ranging from <strong>124.90</strong> to <strong>255.61</strong>.</p>
+<p>Units sold have doubled after <strong>February 2018</strong>, driven by two main factors:</p>
+<ol>
+<li>An overall increase in website traffic, as observed during the initial data exploration.</li>
+<li>A decrease in average price over time.</li>
+</ol>
+<p>When breaking the data down by seller, it becomes clear that seller <code>4869f7a5dfa277a7dca6462dcf3b52b2</code> played a key role in driving the price down after <strong>January 2018</strong>. This aggressive pricing strategy allowed them to capture the majority of the market share and effectively set a new market price for the product.</p>
 </div>
 </div>
 </div>
@@ -7683,6 +7706,7 @@ Analysing the results and discussing challenges faced along the way.</p>
 <li><strong>Best-case</strong> demand response (0.975 expectile)</li>
 </ul>
 <p>This approach provides a comprehensive view of how quantity responds to price changes under varying conditions, which is crucial for accurate revenue modeling.</p>
+<p>After these cases are modelled we graph the derived expected revenue for the associated gam models, overlaying the best case Price and quantities which were existant within the data.</p>
 </div>
 </div>
 </div>
@@ -7709,6 +7733,17 @@ Analysing the results and discussing challenges faced along the way.</p>
 </div>
 </div>
 </div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=38bddad9">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><img alt="image.png" src="./Graphs/EXPECTED_REVENUE_OG.png"/></p>
+</div>
+</div>
+</div>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7d180c6b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7716,6 +7751,25 @@ Analysing the results and discussing challenges faced along the way.</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p><img alt="image.png" src="./Graphs/EXPECTED_REVENUE.png"/></p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cd551041">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Results">Results<a class="anchor-link" href="#Results">¶</a></h2><p>Based on the top expected revenue scenarios modeled from the elasticity curve, the recommended pricing strategy moving forward — <em>ceteris paribus</em> — is to maintain prices within the <strong>$120 to $160</strong> range. Movements within this band should be responsive to the pricing behavior of competing sellers.</p>
+<p>Since marginal costs were not included in this analysis, there is justification for favoring prices at the <strong>higher end of the range</strong> to maximize profit. However, demand is observed to shrink significantly at prices above <strong>$160</strong>, suggesting diminishing returns beyond this threshold.</p>
+<hr/>
+<h2 id="Challenges">Challenges<a class="anchor-link" href="#Challenges">¶</a></h2><h3 id="1.-Limited-Data-Availability"><strong>1. Limited Data Availability</strong><a class="anchor-link" href="#1.-Limited-Data-Availability">¶</a></h3><p>The dataset covers a relatively short period — from <strong>January 2017 to August 2018</strong> — with total monthly sales peaking at approximately <strong>7,000 units</strong>, while the product in question had only <strong>193 units sold across 27 distinct price points</strong>. This created two key challenges:</p>
+<ul>
+<li><strong>Sparse coverage of the elasticity curve</strong>, leading to high variability between worst-case, median, and best-case scenarios. This variability propagated into the expected revenue estimates.</li>
+<li>The absence of a stable market environment makes it difficult to confidently attribute changes in demand solely to price changes, rather than external factors like fluctuating customer traffic.</li>
+</ul>
+<h3 id="2.-Lack-of-Marginal-Cost-Data"><strong>2. Lack of Marginal Cost Data</strong><a class="anchor-link" href="#2.-Lack-of-Marginal-Cost-Data">¶</a></h3><p>Without information on marginal costs, it is impossible to accurately determine profit-maximizing price points. This limits the ability to provide a complete pricing recommendation. However, the analysis still identified price thresholds — notably prices above <strong>$160</strong> — where demand begins to drop sharply, informing upper boundaries for pricing decisions.</p>
 </div>
 </div>
 </div>
