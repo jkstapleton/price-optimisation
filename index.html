@@ -7535,6 +7535,9 @@ Plot the elasticity curve and simulate revenue outcomes across different price p
 <li><p><strong>Results and Challenges</strong>
 Analysing the results and discussing challenges faced along the way.</p>
 </li>
+<li><p><strong>Conclusion</strong>
+Summarising the model, challenges and findings</p>
+</li>
 </ol>
 </div>
 </div>
@@ -7547,19 +7550,19 @@ Analysing the results and discussing challenges faced along the way.</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="1.-Data-Exploration">1. Data Exploration<a class="anchor-link" href="#1.-Data-Exploration">¶</a></h1><blockquote>
-<p>transactional data is from september 2016 to 2020 April</p>
+<p>Transactional data is from september 2016 to 2020 April</p>
 </blockquote>
 <blockquote>
-<p>more than 98,000 transactions over the period</p>
+<p>More than 98,000 transactions over the period</p>
 </blockquote>
 <blockquote>
-<p>2912 original seller ids</p>
+<p>2912 original seller IDs</p>
 </blockquote>
 <blockquote>
-<p>Data cleaned before 2017 and after 2018-08 due to the inconsistency of the quantity of the data and therefore the inability to understand its legitamacy</p>
+<p>Data omitted before 2017 and after 2018-08 due to the inconsistency seen in sales</p>
 </blockquote>
 <blockquote>
-<p>Monthly sales saw rapid  growth with it peaking in october 2017 helped by Black Friday from their it levelled out with it dipping in May 2018 onwards.</p>
+<p>Monthly sales saw rapid growth after october 2017 helped by Black Friday, which then leveled out and then dipping from May 2018 onwards.</p>
 </blockquote>
 <blockquote>
 <p>Health and Beauty, Watches and bed bath and table are the three largest categories of sales</p>
@@ -7618,7 +7621,7 @@ Analysing the results and discussing challenges faced along the way.</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="3.-Product-Selection-and-Analysis">3. Product Selection and Analysis<a class="anchor-link" href="#3.-Product-Selection-and-Analysis">¶</a></h1><p>The product selection is based on two key criteria:</p>
+<h1 id="2.-Product-Selection-and-Analysis">2. Product Selection and Analysis<a class="anchor-link" href="#2.-Product-Selection-and-Analysis">¶</a></h1><p>The product selection is based on two key criteria:</p>
 <ul>
 <li>The number of unique price points</li>
 <li>The quantity of sales</li>
@@ -7706,7 +7709,7 @@ Analysing the results and discussing challenges faced along the way.</p>
 <li><strong>Best-case</strong> demand response (0.975 expectile)</li>
 </ul>
 <p>This approach provides a comprehensive view of how quantity responds to price changes under varying conditions, which is crucial for accurate revenue modeling.</p>
-<p>After these cases are modelled we graph the derived expected revenue for the associated gam models, overlaying the best case Price and quantities which were existant within the data.</p>
+<p>After these cases were modelled the expected revenue was derived and graphed for the associated gam scenarios, overlaying the best case prices and quantities which were existant along the scenarios.</p>
 </div>
 </div>
 </div>
@@ -7755,7 +7758,18 @@ Analysing the results and discussing challenges faced along the way.</p>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cd551041">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=af6048f4">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="4.-Results-and-Challenges">4. Results and Challenges<a class="anchor-link" href="#4.-Results-and-Challenges">¶</a></h1>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1a9e57bc">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7764,12 +7778,59 @@ Analysing the results and discussing challenges faced along the way.</p>
 <h2 id="Results">Results<a class="anchor-link" href="#Results">¶</a></h2><p>Based on the top expected revenue scenarios modeled from the elasticity curve, the recommended pricing strategy moving forward — <em>ceteris paribus</em> — is to maintain prices within the <strong>$120 to $160</strong> range. Movements within this band should be responsive to the pricing behavior of competing sellers.</p>
 <p>Since marginal costs were not included in this analysis, there is justification for favoring prices at the <strong>higher end of the range</strong> to maximize profit. However, demand is observed to shrink significantly at prices above <strong>$160</strong>, suggesting diminishing returns beyond this threshold.</p>
 <hr/>
-<h2 id="Challenges">Challenges<a class="anchor-link" href="#Challenges">¶</a></h2><h3 id="1.-Limited-Data-Availability"><strong>1. Limited Data Availability</strong><a class="anchor-link" href="#1.-Limited-Data-Availability">¶</a></h3><p>The dataset covers a relatively short period — from <strong>January 2017 to August 2018</strong> — with total monthly sales peaking at approximately <strong>7,000 units</strong>, while the product in question had only <strong>193 units sold across 27 distinct price points</strong>. This created two key challenges:</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bdc1c6b0">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Challenges">Challenges<a class="anchor-link" href="#Challenges">¶</a></h2>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cd551041">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="1.-Limited-Data-Availability"><strong>1. Limited Data Availability</strong><a class="anchor-link" href="#1.-Limited-Data-Availability">¶</a></h3><p>The dataset covers a relatively short period — from <strong>January 2017 to August 2018</strong> — with total monthly sales peaking at approximately <strong>7,000 units</strong>, while the product in question had only <strong>193 units sold across 27 distinct price points</strong>. This created two key challenges:</p>
 <ul>
 <li><strong>Sparse coverage of the elasticity curve</strong>, leading to high variability between worst-case, median, and best-case scenarios. This variability propagated into the expected revenue estimates.</li>
 <li>The absence of a stable market environment makes it difficult to confidently attribute changes in demand solely to price changes, rather than external factors like fluctuating customer traffic.</li>
 </ul>
 <h3 id="2.-Lack-of-Marginal-Cost-Data"><strong>2. Lack of Marginal Cost Data</strong><a class="anchor-link" href="#2.-Lack-of-Marginal-Cost-Data">¶</a></h3><p>Without information on marginal costs, it is impossible to accurately determine profit-maximizing price points. This limits the ability to provide a complete pricing recommendation. However, the analysis still identified price thresholds — notably prices above <strong>$160</strong> — where demand begins to drop sharply, informing upper boundaries for pricing decisions.</p>
+<hr/>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5b163a6a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="5.-Conclusion">5. Conclusion<a class="anchor-link" href="#5.-Conclusion">¶</a></h1>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8a10af15">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>The analysis reveals that optimal pricing for this product lies within the <strong>$120-$160 range</strong>, with prices above $160 showing diminishing returns due to steep demand deterioration. The modeling approach, which incorporated worst-case, median, and best-case scenarios through different expectiles, provides a robust framework for understanding demand uncertainty and making informed pricing decisions under varying market conditions.</p>
+<p>While the study faced limitations including sparse data coverage and the absence of marginal cost information, the methodology successfully identified key pricing thresholds and market dynamics. The competitive pricing behavior observed, particularly from seller <strong>4869f7a5dfa277a7dca6462dcf3b52b2</strong>, highlights the importance of monitoring competitor actions and adjusting pricing strategies accordingly.</p>
+<p>The insights gained from this model extend beyond the specific product analyzed. The framework demonstrates how businesses can leverage historical transactional data to understand price elasticity, even with limited datasets. The approach of modeling multiple expectiles provides a more comprehensive view of potential outcomes compared to traditional single-point estimates, enabling more confident decision-making in uncertain market environments.</p>
+<p>Moving forward, this model could be enhanced with additional data sources, including competitor pricing intelligence, seasonal demand patterns, and cost structure information. Nevertheless, the current analysis provides a solid foundation for data-driven pricing decisions and illustrates the practical value of applying advanced analytics to e-commerce pricing optimization.</p>
 </div>
 </div>
 </div>
